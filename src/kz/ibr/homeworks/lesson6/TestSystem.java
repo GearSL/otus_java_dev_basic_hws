@@ -29,7 +29,7 @@ public class TestSystem {
 
         for(int i = 0; i < testExamples[0][0].length; i++) {
             // Вывод вопроса на экран.
-            System.out.println(testExamples[0][0][i]);
+            System.out.println(testExamples[0][0][i] + ":");
 
             // Вывод вариантов ответов на экран.
             for(int j = 0; j < testExamples[1][1].length; j++){
