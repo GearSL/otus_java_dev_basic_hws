@@ -1,7 +1,6 @@
 package kz.ibr.homeworks.lesson6;
 
-import java.util.Objects;
-import java.util.Scanner;
+import java.util.*;
 
 /**
  * ДЗ "Система тестирования".
@@ -10,6 +9,7 @@ public class TestSystem {
     public static void main(String[] args) {
 
         int correctCount = 0, wrongCount = 0;
+        List<Integer> answers = new ArrayList<>();
 
         Object[][][] testExamples = {
                 {
@@ -36,14 +36,17 @@ public class TestSystem {
                 System.out.println(testExamples[1][i][j] + ";");
             }
             System.out.print("Ваш ответ: ");
+            int answer = scanner.nextInt();
             // Считываем с консоли ответ пользователя.
             // Проверяем ответ увеличиваем счетчики и выводим результат.
-            if (Objects.equals(testExamples[2][0][i], scanner.nextInt())) {
+            if (Objects.equals(testExamples[2][0][i], answer)) {
                 correctCount++;
             } else {
                 wrongCount++;
             }
+            answers.add(answer);
         }
         System.out.println("Результат: правильно " + correctCount + ", неправильно " + wrongCount);
+        System.out.println("Ваши ответы:" + answers);
     }
 }
