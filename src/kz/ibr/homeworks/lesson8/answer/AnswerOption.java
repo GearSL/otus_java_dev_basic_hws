@@ -1,9 +1,9 @@
-package kz.ibr.homeworks.lesson8;
+package kz.ibr.homeworks.lesson8.answer;
 
 public class AnswerOption {
     private final String answer;
     private final boolean isCorrect;
-    AnswerOption(String answer, boolean isCorrect){
+    public AnswerOption(String answer, boolean isCorrect){
         this.answer = answer;
         this.isCorrect = isCorrect;
     }

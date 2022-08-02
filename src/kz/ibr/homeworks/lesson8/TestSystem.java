@@ -1,5 +1,8 @@
 package kz.ibr.homeworks.lesson8;
 
+import kz.ibr.homeworks.lesson8.answer.AnswerOption;
+import kz.ibr.homeworks.lesson8.question.Question;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;

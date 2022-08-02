@@ -1,4 +1,6 @@
-package kz.ibr.homeworks.lesson8;
+package kz.ibr.homeworks.lesson8.question;
+
+import kz.ibr.homeworks.lesson8.answer.AnswerOption;
 
 public class Question {
     private final String questionText;
@@ -6,7 +8,7 @@ public class Question {
     // т.к. в lesson6 использовал ArrayList а нужно было как раз попрактиковаться с этим
     private AnswerOption[] answerOptions;
 
-    Question(String questionText){
+    public Question(String questionText){
         this.questionText = questionText;
     }
 
