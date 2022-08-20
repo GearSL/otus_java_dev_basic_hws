@@ -24,6 +24,8 @@ public class Bank {
         sergeyAccounts.add(account_201);
         Account account_202 = new Account(202, 2);
         sergeyAccounts.add(account_202);
+        Account account_202_2 = new Account(202, 2);
+        sergeyAccounts.add(account_202_2);
         bank.registerClient(sergey, sergeyAccounts);
 
         Client vladimir = new Client(31, "Vladimir");
