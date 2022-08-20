@@ -1,12 +1,10 @@
 package kz.ibr.homeworks.lesson12.resources;
 
-import java.util.ArrayList;
-import java.util.LinkedHashMap;
-import java.util.Map;
+import java.util.*;
 
 public class BankAccounts {
     private static BankAccounts instance;
-    private final Map<Clients, ArrayList<Accounts>> accounts = new LinkedHashMap<>();
+    private final Map<Client, HashSet<Account>> accounts = new HashMap<>();
 
     private BankAccounts(){}
 
@@ -17,24 +15,22 @@ public class BankAccounts {
         return instance;
     }
 
-    public void registerClient(Clients client, ArrayList<Accounts> accounts){
+    public void registerClient(Client client, HashSet<Account> accounts){
         this.accounts.put(client, accounts);
     }
 
-    public ArrayList<Accounts> getClientAccounts(Clients client){
+    public HashSet<Account> getClientAccounts(Client client){
         return accounts.get(client);
     }
 
-    public Clients findClientByAccount(ArrayList<Accounts> account){
-        for (Map.Entry<Clients, ArrayList<Accounts>> entry : accounts.entrySet()) {
-            if (entry.getValue().equals(account)) {
-                return entry.getKey();
+    public Client findClientByAccount(Account account){
+        for (Map.Entry<Client, HashSet<Account>> entry : accounts.entrySet()) {
+            for (int i = 0; i < entry.getValue().size(); i++){
+                if(entry.getValue().contains(account)){
+                    return entry.getKey();
+                }
             }
         }
         return null;
-    }
-
-    public Map<Clients, ArrayList<Accounts>> getAccounts() {
-        return accounts;
     }
 }

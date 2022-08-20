@@ -1,10 +1,10 @@
 package kz.ibr.homeworks.lesson12.resources;
 
-public class Accounts {
+public class Account {
     private final int accountId;
     private final int quantityCoins;
 
-    public Accounts(int accountId, int quantityCoins){
+    public Account(int accountId, int quantityCoins){
         this.accountId = accountId;
         this.quantityCoins = quantityCoins;
     }
