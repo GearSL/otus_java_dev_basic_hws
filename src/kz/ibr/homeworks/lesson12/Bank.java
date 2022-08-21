@@ -14,7 +14,7 @@ public class Bank {
         HashSet<Account> petrAccounts = new HashSet<>();
         Account account_101 = new Account(101, 1);
         petrAccounts.add(account_101);
-        Account account_102 = new Account(101, 1);
+        Account account_102 = new Account(102, 1);
         petrAccounts.add(account_102);
         bank.registerClient(petr, petrAccounts);
 
