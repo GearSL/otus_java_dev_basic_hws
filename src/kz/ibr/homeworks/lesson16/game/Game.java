@@ -16,12 +16,14 @@ public class Game {
 
         //Ошибка, т.к. у нас могут выпасть равные значения для обоих игроков, поэтому переписал данный блок
         //Player winner = (player1Result > player2Result)? player1: player2;
+        //Чтобы было более читабельно и не пришлось как в прошлой вызывать принтер printWinner(null) добавил новый метод
+        //printDraw() для вывода ничьей
         if(player1Result > player2Result){
             winnerPrinter.printWinner(player1);
         } else if (player1Result < player2Result){
             winnerPrinter.printWinner(player2);
         } else {
-            winnerPrinter.printWinner(null);
+            winnerPrinter.printDraw();
         }
     }
 }

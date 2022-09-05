@@ -3,8 +3,6 @@ package kz.ibr.homeworks.lesson16.tests.units.tools;
 import kz.ibr.homeworks.lesson16.game.GameWinnerPrinter;
 import kz.ibr.homeworks.lesson16.game.Player;
 
-import java.util.Objects;
-
 public class GameWinnerConsolePrinterSpy implements GameWinnerPrinter {
 
     Player winner;
@@ -13,10 +11,12 @@ public class GameWinnerConsolePrinterSpy implements GameWinnerPrinter {
         this.winner = winner;
     }
 
-    public String getWinnerName() {
-        if(Objects.isNull(this.winner)){
-            return "friendship";
-        }
-        return winner.getName();
+    @Override
+    public void printDraw() {
+        this.winner = null;
+    }
+
+    public Player getWinner() {
+        return winner;
     }
 }

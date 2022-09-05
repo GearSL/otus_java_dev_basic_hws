@@ -1,6 +1,21 @@
 package kz.ibr.homeworks.lesson16.resources;
 
+import kz.ibr.homeworks.lesson16.game.Player;
+
 public class Assertions {
+
+    public static void assertEquals(Boolean expected, Boolean actual) {
+        if (expected != actual) {
+            throw new AssertionError(String.format("Expected " + expected + " " + actual));
+        }
+    }
+
+    public static void assertEquals(Player expected, Player actual) {
+        if (expected != actual) {
+            throw new AssertionError(String.format("Expected " + expected + " " + actual));
+        }
+    }
+
     public static void assertEquals(int expected, int actual) {
         if (expected != actual) {
             throw new AssertionError(String.format("Expected %d = %d", expected, actual));
@@ -40,5 +55,4 @@ public class Assertions {
             throw new AssertionError(String.format("Expected \"%s\" = \"%s\"", expected.getSimpleName(), actual.getClass().getSimpleName()));
         }
     }
-
 }
