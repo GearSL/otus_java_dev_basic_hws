@@ -11,8 +11,7 @@ public class GameTest {
 
     @Test
     public void player1WonTest(){
-        DiceImplFake diceImpl = new DiceImplFake();
-        diceImpl.setWinningCall(1);
+        DiceImplFake diceImpl = new DiceImplFake(1);
         GameWinnerConsolePrinterSpy printer = new GameWinnerConsolePrinterSpy();
         Player player1 = new Player("player1");
         Player player2 = new Player("player2");
@@ -23,8 +22,7 @@ public class GameTest {
 
     @Test
     public void player2WonTest(){
-        DiceImplFake diceImpl = new DiceImplFake();
-        diceImpl.setWinningCall(2);
+        DiceImplFake diceImpl = new DiceImplFake(2);
         GameWinnerConsolePrinterSpy printer = new GameWinnerConsolePrinterSpy();
         Player player1 = new Player("player1");
         Player player2 = new Player("player2");
@@ -35,8 +33,7 @@ public class GameTest {
 
     @Test
     public void friendshipWonTest(){
-        DiceImplFake diceImpl = new DiceImplFake();
-        diceImpl.setWinningCall(3);
+        DiceImplFake diceImpl = new DiceImplFake(3);
         GameWinnerConsolePrinterSpy printer = new GameWinnerConsolePrinterSpy();
         Player player1 = new Player("player1");
         Player player2 = new Player("player2");
