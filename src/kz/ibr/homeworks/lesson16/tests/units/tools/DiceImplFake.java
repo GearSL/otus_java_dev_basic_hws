@@ -6,8 +6,6 @@ public class DiceImplFake implements Dice {
     int winningCall;
     int callsCount;
 
-    public DiceImplFake() {
-    }
 
     public DiceImplFake(int winningCall) {
         this.winningCall = winningCall;
