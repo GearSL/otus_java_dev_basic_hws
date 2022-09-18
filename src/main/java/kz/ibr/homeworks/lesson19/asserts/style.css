@@ -1,0 +1,27 @@
+h1,
+h2,
+h3 {
+  color: steelblue;
+}
+
+.content-block {
+  width: 800px;
+  margin-left: 20px;
+}
+
+.input-form > input {
+  width: 300px;
+}
+
+div {
+  border: 1px solid steelblue;
+  width: fit-content;
+  min-height: 50px;
+  padding: 30px;
+}
+
+th,
+td {
+  border: 1px solid black;
+  border-radius: 3px;
+}

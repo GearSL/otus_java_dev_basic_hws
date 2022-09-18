@@ -1,0 +1,65 @@
+<!DOCTYPE>
+<html lang="en">
+
+<head>
+    <title>Home work</title>
+    <link rel="stylesheet" href="asserts/style.css">
+    <script src="asserts/js.js"></script>
+</head>
+
+<body onload="updateTableData()">
+<h1>Form for adding student information</h1>
+
+<div id="addingFromContainer">
+    <label for="studentName">Student name:</label>
+    <input id="studentName"/>
+
+    <label for="dateBirth">Date of birth:</label>
+    <input id="dateBirth" type="date"/>
+    <label for="genderInput">Sex:</label>
+    <input id="genderInput" list="genderList" placeholder="choose a gender"/>
+    <datalist id="genderList">
+        <option value="male">male</option>
+        <option value="female">female</option>
+    </datalist>
+    <label for="age">Age:</label>
+    <input id="age"/>
+
+    <button onclick="addRow()">ADD</button>
+</div>
+
+<div id="studentTableContainer">
+    <table id="studentsTable">
+        <tr>
+            <th>Student name</th>
+            <th>Sex</th>
+            <th>Date of birth</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>John Snow</td>
+            <td>male
+            <td>03/15/1995</td>
+            <td>30</td>
+        </tr>
+        <tr>
+            <td>Daenerys Targaryen</td>
+            <td>female
+            <td>10/09/1989</td>
+            <td>40</td>
+        </tr>
+        <tr>
+            <td>Samwell Tarly</td>
+            <td>male
+            <td>12/11/1996</td>
+            <td>50</td>
+        </tr>
+        <tr></tr>
+        <tr>
+            <td colspan="2">Average students age</td>
+            <td colspan="2">0</td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
