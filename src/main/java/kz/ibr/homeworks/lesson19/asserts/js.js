@@ -6,10 +6,17 @@ function addRow() {
     let studentDateOBirthCell = newRow.insertCell(2);
     let studentAgeCell = newRow.insertCell(3);
 
-    let studentName = document.createTextNode('Some name');
-    let studentGender = document.createTextNode('Male');
-    let studentDateOBirth = document.createTextNode('10/12/2000');
-    let studentAge = document.createTextNode(table.rows.length);
+    let studentNameInp = document.querySelector("#studentName").value;
+    let genderInp = document.querySelector("#gender").value;
+    let dateBirthInp = document.querySelector("#dateBirth").value;
+    let ageInp = document.querySelector("#age").value;
+
+    console.log(studentNameInp);
+
+    let studentName = document.createTextNode(studentNameInp);
+    let studentGender = document.createTextNode(genderInp);
+    let studentDateOBirth = document.createTextNode(dateBirthInp);
+    let studentAge = document.createTextNode(ageInp);
 
     studentNameCell.appendChild(studentName);
     studentGenderCell.appendChild(studentGender);
