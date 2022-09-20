@@ -11,8 +11,6 @@ function addRow() {
     let dateBirthInp = document.querySelector("#dateBirth").value;
     let ageInp = document.querySelector("#age").value;
 
-    console.log(studentNameInp);
-
     let studentName = document.createTextNode(studentNameInp);
     let studentGender = document.createTextNode(genderInp);
     let studentDateOBirth = document.createTextNode(dateBirthInp);
@@ -22,9 +20,6 @@ function addRow() {
     studentGenderCell.appendChild(studentGender);
     studentDateOBirthCell.appendChild(studentDateOBirth);
     studentAgeCell.appendChild(studentAge);
-
-    console.log(table);
-    document.createElement("tr");
 
     updateTableData();
 }
