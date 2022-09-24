@@ -9,12 +9,12 @@ function addRow() {
     let studentNameInp = document.querySelector("#studentName").value;
     let genderInp = document.querySelector("#gender").value;
     let dateBirthInp = document.querySelector("#dateBirth").value;
-    let ageInp = document.querySelector("#age").value;
+    let age = calculateStudentAge(dateBirthInp);
 
     let studentName = document.createTextNode(studentNameInp);
     let studentGender = document.createTextNode(genderInp);
     let studentDateOBirth = document.createTextNode(dateBirthInp);
-    let studentAge = document.createTextNode(ageInp);
+    let studentAge = document.createTextNode(parseInt(age).toString());
 
     studentNameCell.appendChild(studentName);
     studentGenderCell.appendChild(studentGender);
@@ -41,6 +41,12 @@ function calculateAverageAge() {
         averageAge = sumAge / summableCellsCount;
     }
     return averageAge;
+}
+
+function calculateStudentAge(dateOfBirth){
+    const currentDate = new Date();
+    const BirthDate = new Date(dateOfBirth);
+    return (currentDate - BirthDate) / 1000 / 60 / 60 / 24 / 365;
 }
 
 function setAverageAge(age) {
